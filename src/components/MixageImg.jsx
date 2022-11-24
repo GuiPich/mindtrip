@@ -1,25 +1,19 @@
 import React, { useState } from 'react';
-import logo from '../assets/logologo.jpg';
-
-const { Configuration, OpenAIApi } = require("openai");
-const configuration = new Configuration({
-    apiKey: process.env.REACT_APP_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
+import logo from '../assets/logo.png';
 
 
 const MixageImg = () => {
 
-    const [userPrompt, setUserPrompt] = useState("");
+    const { Configuration, OpenAIApi } = require("openai");
+    const configuration = new Configuration({
+        apiKey: "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",
+    });
+    const openai = new OpenAIApi(configuration);
 
+    const [userPrompt, setUserPrompt] = useState("");
     const [imageUrl, setImageUrl] = useState("");
 
-    const aa = () => {
-        setUserPrompt();
-    };
-
-
-    const generatePosterCard = async () => {
+    const generateImage = async () => {
         const imageParameters = {
             prompt: userPrompt,
             n: 1,
@@ -42,9 +36,9 @@ const MixageImg = () => {
 
             <input
                 placeholder='A sunset on the Sydney Opera House'
-                onClick={generatePosterCard}
+                onChange={(e) => setUserPrompt(e.target.value)}
             />
-            <button>Generate</button>
+            <button onClick={() => generateImage()}>Generate</button>
         </div>
     )
 }
