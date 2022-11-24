@@ -1,31 +1,50 @@
-import React, { useEffect, useState } from 'react';
-import mergeImages from 'merge-images';
-import landscape from '../assets/MixageImg/landscape.jpg';
-import sheep from '../assets/MixageImg/sheep.jpg';
+import React, { useState } from 'react';
+import logo from '../assets/logologo.jpg';
+
+const { Configuration, OpenAIApi } = require("openai");
+const configuration = new Configuration({
+    apiKey: process.env.REACT_APP_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+
 
 const MixageImg = () => {
 
-    const [src, setSrc] = useState();
+    const [userPrompt, setUserPrompt] = useState("");
 
-    const createImgMerge = () => {
-        mergeImages([landscape, sheep])
-            .then((res) => {
-                setSrc(res)
-            })
-            .catch((err) => {
-                console.error(err);
-            })
+    const [imageUrl, setImageUrl] = useState("");
+
+    const aa = () => {
+        setUserPrompt();
     };
 
-    useEffect(() => {
-        createImgMerge()
-    }, [])
 
+    const generatePosterCard = async () => {
+        const imageParameters = {
+            prompt: userPrompt,
+            n: 1,
+            size: "256x256",
+        }
+        const response = await openai.createImage(imageParameters);
+        const urlData = response.data.data[0].url
+        console.log(urlData);
+        setImageUrl(urlData);
+
+    };
 
     return (
         <div className='mixageImg'>
-            <h4>essai</h4>
-            <img src={src} alt="essai" />
+            {
+                imageUrl
+                    ? <img src={imageUrl} className="image" alt="ai thing" />
+                    : <img src={logo} className="image" alt="logo" />
+            }
+
+            <input
+                placeholder='A sunset on the Sydney Opera House'
+                onClick={generatePosterCard}
+            />
+            <button>Generate</button>
         </div>
     )
 }
