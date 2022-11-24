@@ -27,7 +27,7 @@ const star = [
     {
         id: 4,
         name: "Gérald Darmanin",
-        price: 2
+        price: -1800
 
     },
     {
@@ -102,6 +102,7 @@ const time = [
 
     }
 ]
+
 
 function Option({ tarif }) {
 
