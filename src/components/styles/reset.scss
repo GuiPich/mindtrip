@@ -86,6 +86,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -100,30 +101,35 @@ nav,
 section {
   display: block;
 }
+
 html {
-  font-size: 10px;
-  font-family: $font-text;
+  font-size: 20px;
   overflow-x: hidden;
   scroll-behavior: smooth;
   cursor: default;
   background: #f9f9f9;
-  color: $primary-color;
+
 }
+
 body {
   line-height: 1;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -131,6 +137,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
