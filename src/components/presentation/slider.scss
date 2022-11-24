@@ -1,0 +1,26 @@
+.slider {
+    width: 100%;
+
+    &_carousel {
+        width: 700px;
+        height: 250px;
+
+        .react-multiple-carousel__arrow {
+            background-color: $fourth-color;
+            width: 50px;
+            height: 50px;
+        }
+
+        &_img {
+            width: 700px;
+            height: 250px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 15px;
+        }
+
+        .react-multi-carousel-item {
+            opacity: 95%;
+        }
+    }
+}
