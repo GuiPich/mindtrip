@@ -2,17 +2,21 @@
     width: 100%;
 
     &_carousel {
-        width: 700px;
+        width: 100%;
         height: 250px;
 
         .react-multiple-carousel__arrow {
-            background-color: $fourth-color;
+            background-color: $tertiary-color;
             width: 50px;
             height: 50px;
+
+            &:hover {
+                background-color: $secondary-color;
+            }
         }
 
         &_img {
-            width: 700px;
+            width: 100%;
             height: 250px;
             object-fit: cover;
             object-position: top;
@@ -29,20 +33,16 @@
     width: 100%;
 
     &_carousel {
-        width: 700px;
+        width: 100%;
         height: 250px;
-
-        .react-multiple-carousel__arrow {
-            background-color: $fourth-color;
-            width: 50px;
-            height: 50px;
-        }
 
         .react-multiple-carousel__arrow {
             display: none;
         }
 
         &_box {
+            width: 100%;
+            margin-left: -1px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -53,7 +53,6 @@
                 width: 65%;
                 height: 250px;
                 object-fit: cover;
-                // object-position: top;
                 border-radius: 15px;
             }
 
@@ -62,7 +61,7 @@
                 font-size: 28px;
                 font-family: $font-text;
                 font-weight: 700;
-                color: $fourth-color;
+                color: $primary-color;
             }
         }
 

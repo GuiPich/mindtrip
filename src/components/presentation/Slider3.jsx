@@ -59,7 +59,7 @@ const Slider3 = () => {
                 {sliderData.map((infos) => {
                     return (
                         <div className='slider3_carousel_box'>
-                            <p className='slider3_carousel_box_quote'>{infos.name} <br /> {infos.quote}  </p>
+                            <p className='slider3_carousel_box_quote'>{infos.name} <br /> "{infos.quote}"</p>
                             <img
                                 key={infos.id}
                                 className="slider3_carousel_box_img"

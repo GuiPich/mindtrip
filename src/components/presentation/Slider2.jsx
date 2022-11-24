@@ -4,8 +4,12 @@ import "react-multi-carousel/lib/styles.css";
 
 const sliderData = [
     {
-        id: 2,
+        id: 1,
         picture: "/assets/op/op2.jpg",
+    },
+    {
+        id: 2,
+        picture: "/assets/op/op3.jpg",
     },
     {
         id: 3,
