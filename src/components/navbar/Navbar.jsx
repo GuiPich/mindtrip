@@ -8,10 +8,13 @@ function Navbar() {
     return (
         <div className='nav'>
             <div className='icons'>
-                <Link to="/home" >
+                <Link to="/" >
                     <img className='img' src={Logo} alt="Logo" />
                 </Link>
-                <p className='link'> <Link to="/TonTrip"> Your Trip </Link></p>
+                <div className='navlink'>
+                    <p className='link1'> <Link to="/"> Home </Link></p>
+                    <p className='link2'> <Link to="/TonTrip"> Your Trip </Link></p>
+                </div>
             </div>
         </div>
     )
