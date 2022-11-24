@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 
 const star = [
     {
+        id: 0,
+        name: "No star please",
+        price: 0
+
+    }, {
         id: 1,
         name: "Nathalie Portman",
         price: 5000
@@ -41,6 +46,11 @@ const star = [
 
 const animal = [
     {
+        id: 0,
+        name: "No pet please",
+        price: 0
+
+    }, {
         id: 1,
         name: "Dog",
         price: 100
@@ -93,18 +103,34 @@ const time = [
     }
 ]
 
-function Option() {
+function Option({ tarif }) {
 
-    const [selectStar, setSelectStar] = useState([])
-    const [selectPet, setSelectPet] = useState([])
+    const [selectStar, setSelectStar] = useState()
+    const [selectPet, setSelectPet] = useState()
+    const [selectTime, setSelectTime] = useState()
 
-    const handleChange = (event) => {
+
+
+    const handleChange1 = (event) => {
         setSelectStar(event.target.value);
-        setSelectPet(event.target.value);
     };
 
-    console.log(selectStar)
+    const handleChange2 = (event) => {
+        setSelectPet(event.target.value);
+    };
+    const handleChange3 = (event) => {
+        setSelectTime(event.target.value);
+    };
+
     console.log(selectPet)
+    console.log(selectStar)
+    console.log(selectTime)
+
+    const tarifOption =
+        tarif + parseInt(selectTime) + parseInt(selectPet) + parseInt(selectStar)
+
+    console.log(tarifOption)
+
     return (
         <div className='option'>
             <h1>Selectionner vos options</h1>
@@ -115,8 +141,7 @@ function Option() {
                     <h2>Partir avec une star</h2>
 
                     <label htmlFor='starsList'>avec qui?</label>
-                    <select onChange={handleChange} id="starsList">
-                        <option value="">---</option>
+                    <select onChange={handleChange1} id="starsList">
                         {star.map((star) => (
                             <option key={star.id} value={star.price}>{star.name}</option>
                         ))}
@@ -127,8 +152,7 @@ function Option() {
                 <div className='optionCard'>
                     <h2>Partir avec un animal</h2>
                     <label htmlFor='animalList'>avec qui?</label>
-                    <select onChange={handleChange} id="animalList">
-                        <option value="">---</option>
+                    <select onChange={handleChange2} id="animalList">
                         {animal.map((pet) => (
                             <option key={pet.id} value={pet.price}>{pet.name}</option>
                         ))}
@@ -139,14 +163,16 @@ function Option() {
                 <div className='optionCard'>
                     <h2>Dream length</h2>
                     <label htmlFor='lengthList'>How long?</label>
-                    <select onChange={handleChange} id="lengthList">
-                        <option value="">---</option>
+                    <select onChange={handleChange3} id="lengthList">
                         {time.map((time) => (
                             <option key={time.id} value={time.price}>{time.name}</option>
                         ))}
                     </select>
                 </div>
             </form>
+
+            <p>Prix TTC options incluses en Zeni {tarifOption} Ƶ</p>
+
         </div>
     )
 }
