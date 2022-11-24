@@ -1,13 +1,16 @@
+
+
+
+
 import React, { useState } from 'react'
 import Option from '../components/Option'
+import Navbar from '../components/navbar/Navbar';
+
 
 function Commande() {
 
 
-
     const tarif = 4501
-
-
     return (
         <div>
 
@@ -22,4 +25,5 @@ function Commande() {
     )
 }
 
-export default Commande
+
+export default Commande;

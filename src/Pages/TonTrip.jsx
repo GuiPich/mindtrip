@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../components/navbar/Navbar';
 
 function TonTrip() {
     return (
-        <div>TonTrip</div>
+        <>
+            <Navbar />
+            <div className='trip'>
+                <p>
+                    Composant à appeler de Vincent
+                </p>
+            </div>
+        </>
     )
 }
 

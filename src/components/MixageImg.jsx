@@ -24,8 +24,7 @@ const MixageImg = () => {
 
     return (
         <div className='mixageImg'>
-            <h4>essai</h4>
-            <img src={src} alt="essai" />
+
         </div>
     )
 }
