@@ -1,22 +1,27 @@
-import React from 'react';
+
+
+
+
+import React, { useState } from 'react'
+import Option from '../components/Option'
 import Navbar from '../components/navbar/Navbar';
+
 
 function Commande() {
 
 
+    const tarif = 4501
     return (
-        <>
-            <Navbar />
-            <div className='base'>
+        <div>
 
-                <div className='box'>
-                    <p> Ici je dois rappeler le composant de Vincent pour faire le recap de la selection de la page </p>
-                    <h2> Make your dream come true </h2>
-                    <p> La fusion des images selectionnées </p>
-                </div>
+            <div>Commande</div>
+            <p>Prix TTC en Zeni (hors options) {tarif} Ƶ</p>
 
-            </div>
-        </>
+            <Option tarif={tarif} />
+
+
+
+        </div>
     )
 }
 
