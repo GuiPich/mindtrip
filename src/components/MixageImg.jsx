@@ -31,6 +31,7 @@ const MixageImg = () => {
 
     return (
         <div className='mixageImg'>
+
             {
                 imageUrl
                     ? <img src={imageUrl} className="image" alt="ai thing" />
@@ -42,6 +43,7 @@ const MixageImg = () => {
                 onChange={(e) => setUserPrompt(e.target.value)}
             />
             <button onClick={() => generateImage()}>Generate</button>
+
         </div>
     )
 }
