@@ -1,4 +1,4 @@
-import './App.css';
+import './components/styles/App.scss';
 import MixageImg from './components/MixageImg';
 
 function App() {
