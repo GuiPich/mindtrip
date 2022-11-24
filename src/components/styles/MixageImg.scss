@@ -27,6 +27,11 @@
         background-color: $secondary-color;
         padding: 20px;
         border-radius: 10px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    button:hover {
+        transform: scale(1.2);
     }
 
 }
