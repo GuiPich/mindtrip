@@ -4,7 +4,6 @@ import TonTrip from './Pages/TonTrip';
 import Commande from './Pages/Commande';
 
 
-
 function App() {
   return (
     <div className="App">
@@ -14,7 +13,6 @@ function App() {
         <Route path="/tontrip" element={<TonTrip />} />
         <Route path="/commande" element={<Commande />} />
       </Routes>
-
     </div>
   );
 }
