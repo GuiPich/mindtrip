@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
+import { Configuration, OpenAIApi } from "openai";
 
 
 const MixageImg = () => {
 
-    const { Configuration, OpenAIApi } = require("openai");
+
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: "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",
     });
     const openai = new OpenAIApi(configuration);
 
@@ -14,17 +15,19 @@ const MixageImg = () => {
     const [imageUrl, setImageUrl] = useState("");
 
     const generateImage = async () => {
-        const imageParameters = {
+
+        const response = await openai.createImage({
             prompt: userPrompt,
             n: 1,
-            size: "256x256",
-        }
-        const response = await openai.createImage(imageParameters);
+            size: "512x512",
+        });
+        console.log(response);
         const urlData = response.data.data[0].url
-        console.log(urlData);
+
         setImageUrl(urlData);
 
     };
+    console.log(userPrompt);
 
     return (
         <div className='mixageImg'>
