@@ -2,8 +2,8 @@ import React from 'react';
 
 const Picture = ({ name, url }) => {
     return (
-        <div className='picture'>
-            <img src={url} alt={name}></img>
+        <div >
+            <img src={url} alt={name} className='picture'></img>
         </div>
     );
 };
