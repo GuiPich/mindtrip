@@ -1,6 +1,7 @@
-import matchers from '@testing-library/jest-dom/matchers';
 import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
+import Picture from './Picture';
+import Pool from './Pool';
+
 const pictures = [
     {
         id: 1,
@@ -30,43 +31,38 @@ const pictures = [
 ];
 
 const Query = () => {
-
     const [query, setQuery] = useState('');
+    const [choice, setChoice] = useState('');
+    const [active, setActive] = useState(false);
 
     const handleQuery = (event) => {
         setQuery(event.target.value);
         console.log(query);
     };
     const handleSend = () => {
-        console.log("handle");
+        setChoice(query);
     };
-
-    // const sendQuery = () => {
-    //     axios
-    //         .get(`https://localhost:5000`)
-    //         .then((res) => {
-    //             console.log(res.data);
-    //         });
-    // }
-    // useEffect(() => {
-    //     sendQuery();
-    // }, [query]);
-
+    const choicePicture = () => {
+        setActive(true);
+    }
     return (
-        <div>
-            {/* <h1>TEST</h1>
+        <div className='container'>
             <label htmlFor="name">Votre recherche:</label>
             <input type="text" id="name" name="name" onChange={handleQuery}></input>
-            <button type='submit' onClick={handleSend}>OK</button> */}
+            <button type='submit' onClick={handleSend}>OK</button>
             {pictures.map(image => {
-                return (
-                    <div classname='pictureDiv'>
-                        <img src={image.url} alt={image.name}></img>
-                    </div>
-                )
+                if (image.id == choice || image.name == choice) {
+                    return (
+                        <div className='pictureDiv'>
+                            <button type='submit' className='buttonPicture' onClick={choicePicture}>
+                                <Picture name={image.name} url={image.url} />
+                            </button>
+                            {active && (<Pool name={image.name} url={image.url} />)}
+                        </div>
+                    )
+                }
             })}
         </div>
     );
 };
-
 export default Query;

@@ -1,0 +1,20 @@
+.container {
+    background-color: yellow;
+    .pictureDiv {
+        background-color: yellow;
+        height: 100px;
+        width: 100px;
+
+        .buttonPicture {
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+
+            picture {
+                background-color: yellow;
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+}
