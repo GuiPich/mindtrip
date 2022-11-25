@@ -1,26 +1,27 @@
+
 import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home';
-import TonTrip from './Pages/TonTrip';
 import Commande from './Pages/Commande';
-import Query from './components/Query';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import Querry from './components/Query';
+
+
 
 
 
 function App() {
   return (
     <div className="App">
-
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tontrip" element={<TonTrip />} />
+        <Route path="/tontrip" element={<Querry />} />
         <Route path="/commande" element={<Commande />} />
-        <Route path="/query" element={<Query />} />
       </Routes>
       <Footer />
     </div>
   );
-};
+}
+
 export default App;
