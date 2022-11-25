@@ -262,11 +262,15 @@ function Option({ tarif }) {
     // console.log(tarifOption)
 
     return (
-        <>
-            <div className='option'>
-                <h1>Select your DreamTrip options</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quibusdam ipsa consequatur sint non quia odio, voluptas quis nam doloremque labore accusantium illo error modi voluptatibus dolorem debitis maiores laudantium?</p>
-                <form className='optionContainer'>
+        <div className='option'>
+            <h1>Select your DreamTrip® options</h1>
+            <p>Please select all your desired options below to make
+                your dream come true and enjoy your trip as you
+                never could possibly imagine! Don't forget we offer a lifetime
+                experience, so enjoy and remember... that it's all your head 😉!
+
+            </p>
+            <form className='optionContainer'>
 
                     <div className='optionCard'>
                         <h2>Travel with star ✨</h2>
@@ -301,31 +305,31 @@ function Option({ tarif }) {
                         </select>
                     </div>
 
-                    <div className='optionCard'>
-                        <h2>Period</h2>
-                        <label htmlFor='lengthList'>In which period ⏲️</label>
-                        <select onChange={handleChange4} id="lengthList">
-                            {period.map((era) => (
-                                <option key={era.id} value={era.price}>{era.name}</option>
-                            ))}
-                        </select>
-                    </div>
-                    <div className='optionCard'>
-                        <h2>Place of  DreamTrip</h2>
-                        <label htmlFor='lengthList'>Where? ⏲️</label>
-                        <select onChange={handleChange5} id="lengthList">
-                            {place.map((place) => (
-                                <option key={place.id} value={place.price}>{place.name}</option>
-                            ))}
-                        </select>
-                    </div>
-                </form>
+                <div className='optionCard'>
+                    <h2>Period ⚔️</h2>
+                    <label htmlFor='lengthList'>In which period </label>
+                    <select onChange={handleChange4} id="lengthList">
+                        {period.map((era) => (
+                            <option key={era.id} value={era.price}>{era.name}</option>
+                        ))}
+                    </select>
+                </div>
+                <div className='optionCard'>
+                    <h2>Place of  DreamTrip 🏝️</h2>
+                    <label htmlFor='lengthList'>Where? </label>
+                    <select onChange={handleChange5} id="lengthList">
+                        {place.map((place) => (
+                            <option key={place.id} value={place.price}>{place.name}</option>
+                        ))}
+                    </select>
+                </div>
+            </form>
 
-                <p className='prixFinal'>Prix TTC options incluses en Zeni {tarifOption} Ƶ</p>
+            <div className='contPrixFinal'>
+                <p className='prixFinal'>Total price options included VAT in Zeni <span>{tarifOption} Ƶ</span></p>
+                <button className='btn'>Order and Pay</button>
             </div>
-
-            <MixageImg finalTag={finalTag} />
-        </>
+        </div>
     )
 }
 
