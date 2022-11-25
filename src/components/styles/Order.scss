@@ -1,0 +1,25 @@
+.order {
+    height: 500px;
+    font-family: $font-text;
+    font-size: 70px;
+    color: $secondary-color;
+    gap: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(circle, $fourth-color 0%, $tertiary-color 65%, $secondary-color 75%, $primary-color 80%);
+
+    .transform {
+        transition: all 0.7s 0s ease;
+
+        &:hover {
+            -moz-transform: scale(1.8) rotate(360deg);
+            -webkit-transform: scale(1.8) rotate(360deg);
+            -o-transform: scale(1.8) rotate(360deg);
+            -ms-transform: scale(1.8) rotate(360deg);
+            transform: scale(1.8) rotate(360deg);
+        }
+    }
+}
