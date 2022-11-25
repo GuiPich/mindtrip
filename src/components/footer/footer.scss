@@ -1,6 +1,7 @@
 .foot {
     width: 100%;
     height: 109px;
+    border-top: solid 5px $tertiary-color;
     background: radial-gradient(circle, $fourth-color 30%, $tertiary-color 50%, $secondary-color 80%, $primary-color 100%);
 
     .icons {
@@ -24,10 +25,46 @@
         font-size: 70px;
         cursor: pointer;
         color: $fourth-color;
+        transition: 0.3s ease-in-out;
 
         &:hover {
             color: $secondary-color;
-            transition: 0.3s ease-in-out;
+            transform: scale(1.4);
+        }
+    }
+
+    .nameContainer {
+        display: inline-block;
+        position: relative;
+
+        .nameBase,
+        .nameFooter {
+            font-size: 30px;
+            font-style: $font-text;
+            color: transparent;
+            font-weight: bold;
+        }
+
+        .nameFooter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-shadow: -1px -1px 0 #222, 1px -1px 0 #222, -1px 1px 0 #222, 1px 1px 0 #222, 4px 4px 0 rgba(0, 0, 0, 0.2);
+        }
+
+
+        .f2 {
+            transform: translateY(2px) translateX(-3px);
+            color: $tertiary-color;
+        }
+
+        .f3 {
+            transform: translateY(-4px) translateX(6px);
+            color: $secondary-color;
+        }
+
+        .f4 {
+            color: #ffffff;
         }
     }
 }
