@@ -1,0 +1,73 @@
+.query {
+    font-size: 40px;
+    width: 100%;
+    color: $font-color;
+    margin-top: 10px;
+
+    &_return {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        &_proposition {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+            width: 100%;
+            gap: 20px;
+
+
+        }
+
+        &_button {
+            border: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+
+            .picture {
+                width: 100%;
+                overflow: hidden;
+
+                &_image {
+                    height: 200px;
+                    width: 100%;
+
+                }
+
+                &_description {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .pool {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+
+        .picture {
+            display: flex;
+            height: 200px;
+        }
+    }
+
+    &_link {
+        display: flex;
+        justify-content: center;
+
+        &_button {
+            border: 0;
+            height: 30px;
+            width: 100px;
+            border-radius: 5px;
+        }
+    }
+}

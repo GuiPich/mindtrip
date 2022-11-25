@@ -1,8 +1,4 @@
-
-
-
-
-import React, { useState } from 'react'
+import React from 'react'
 import Option from '../components/Option'
 import Navbar from '../components/navbar/Navbar';
 
@@ -14,9 +10,9 @@ function Commande() {
     return (
         <div>
 
-            <div>Commande</div>
-            <p>Prix TTC en Zeni (hors options) {tarif} Ƶ</p>
-
+            <div className='prixBrut'>
+                <p>Prix TTC en Zeni (hors options) <span> {tarif} Ƶ</span></p>
+            </div>
             <Option tarif={tarif} />
 
 

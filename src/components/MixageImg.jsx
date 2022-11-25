@@ -3,21 +3,24 @@ import logo from '../assets/logo.png';
 import { Configuration, OpenAIApi } from "openai";
 
 
-const MixageImg = () => {
 
+const MixageImg = ({ finalTag }) => {
 
+    console.log(process.env.REACT_APP_OPENAI_API_KEY);
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: process.env.REACT_APP_OPENAI_API_KEY
     });
     const openai = new OpenAIApi(configuration);
 
-    const [userPrompt, setUserPrompt] = useState("");
+    // const [userPrompt, setUserPrompt] = useState("");
     const [imageUrl, setImageUrl] = useState("");
+
+    console.log(finalTag);
 
     const generateImage = async () => {
 
         const response = await openai.createImage({
-            prompt: userPrompt,
+            prompt: finalTag,
             n: 1,
             size: "512x512",
         });
@@ -27,23 +30,16 @@ const MixageImg = () => {
         setImageUrl(urlData);
 
     };
-    console.log(userPrompt);
+    // console.log(userPrompt);
 
     return (
         <div className='mixageImg'>
-
+            <button onClick={() => generateImage()}>Un aperçu de vos futurs souvenirs ???</button>
             {
                 imageUrl
                     ? <img src={imageUrl} className="image" alt="ai thing" />
                     : <img src={logo} className="image" alt="logo" />
             }
-
-            <input
-                placeholder='A sunset on the Sydney Opera House'
-                onChange={(e) => setUserPrompt(e.target.value)}
-            />
-            <button onClick={() => generateImage()}>Generate</button>
-
         </div>
     )
 }

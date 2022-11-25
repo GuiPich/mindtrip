@@ -1,3 +1,26 @@
+p {
+    color: $font-color;
+}
+
+.prixBrut {
+    font-size: 28px;
+    width: auto;
+    padding: 15px;
+    background-color: $fourth-color;
+    border-radius: 10px;
+    width: fit-content;
+
+    span {
+        color: $fourth-color;
+        background-color: white;
+        margin: 3px;
+        padding: 3px 7px;
+        border-radius: 3px;
+    }
+}
+
+
+
 .box {
     background-color: greenyellow;
 
