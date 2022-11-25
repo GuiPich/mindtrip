@@ -33,7 +33,7 @@ const star = [
     {
         id: 4,
         name: "Gérald Darmanin",
-        price: -1800,
+        price: -5800,
         tag: "an ugly politian with short black and white hair"
 
     },
@@ -330,7 +330,7 @@ function Option({ tarif }) {
 
                 <div className='contPrixFinal'>
                     <p className='prixFinal'>Total price options included VAT in Zeni <span>{tarifOption} Ƶ</span></p>
-                    <NavLink to={`/order/${tarifOption}`}> <button className='btn'>Order and Pay</button></NavLink>
+                    <NavLink to={`/order/${tarifOption}`}> <button className='btn'>Order  and Pay</button></NavLink>
                 </div>
             </div>
         </>
