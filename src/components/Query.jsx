@@ -133,7 +133,7 @@ const Query = () => {
             }
             {count == 2 &&
                 <div className='query_return'>
-                    <h1>With what means of transportation?</h1>
+                    <h1>With what kind of means of transport?</h1>
                     <div className='query_return_proposition'>
                         {access.map(image => {
                             if (true) {
@@ -153,7 +153,7 @@ const Query = () => {
             }
             {count == 3 &&
                 <div className='query_return'>
-                    <h1>Who tou want to trip with?</h1>
+                    <h1>Who do you want to trip with?</h1>
                     <div className='query_return_proposition'>
                         {who.map(image => {
                             if (true) {
