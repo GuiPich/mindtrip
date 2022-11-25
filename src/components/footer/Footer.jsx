@@ -11,6 +11,13 @@ function Footer() {
                 <Link to="/" >
                     <img className='img' src={Logo} alt="Logo" />
                 </Link>
+                <div className='nameContainer'>
+
+                    <p className='nameBase'>MindTrip - DreamTrip®</p>
+                    <p className='nameFooter f2'>MindTrip - DreamTrip®</p>
+                    <p className='nameFooter f3'>MindTrip - DreamTrip®</p>
+                    <p className='nameFooter f4'>MindTrip - DreamTrip®</p>
+                </div>
                 <button
                     type="button"
                     className="btnToTop"
