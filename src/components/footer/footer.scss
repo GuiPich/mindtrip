@@ -17,11 +17,12 @@
     }
 
     .btnToTop {
-        margin-right: 10%;
+        margin-right: 2%;
         margin-top: 2%;
         background-color: transparent;
         border: none;
         font-size: 70px;
+        cursor: pointer;
         color: $fourth-color;
 
         &:hover {
