@@ -9,7 +9,7 @@ const Header = () => {
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
-            <h1 className='header_title'>Make your dreams the reality</h1>
+            <h1 className='header_title'>Make your dreams a reality</h1>
         </div>
     );
 };
