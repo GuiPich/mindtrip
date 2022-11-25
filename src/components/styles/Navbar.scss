@@ -12,8 +12,10 @@
 
 
         .img {
-            height: 100px;
+            height: 90px;
             margin-left: 10%;
+            margin-top: 5%;
+
         }
 
         .navlink {
@@ -29,6 +31,10 @@
                 font-size: 25px;
                 font-weight: 600;
                 transition: 0.3s ease-in-out;
+                text-shadow: -1px 1px 0 $tertiary-color,
+                    1px 1px 0 $primary-color,
+                    1px -1px 0 $primary-color,
+                    -1px -1px 0 $primary-color;
 
                 &:hover {
                     color: $secondary-color;
@@ -44,6 +50,10 @@
                 font-size: 25px;
                 font-weight: 600;
                 transition: 0.3s ease-in-out;
+                text-shadow: -1px 1px 0 $tertiary-color,
+                    1px 1px 0 $primary-color,
+                    1px -1px 0 $primary-color,
+                    -1px -1px 0 $primary-color;
 
                 &:hover {
                     color: $tertiary-color;
