@@ -3,15 +3,16 @@ import logo from '../assets/logo.png';
 import { Configuration, OpenAIApi } from "openai";
 
 
+
 const MixageImg = ({ finalTag }) => {
 
 
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: "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",
     });
     const openai = new OpenAIApi(configuration);
 
-    const [userPrompt, setUserPrompt] = useState("");
+    // const [userPrompt, setUserPrompt] = useState("");
     const [imageUrl, setImageUrl] = useState("");
 
     console.log(finalTag);
@@ -29,7 +30,7 @@ const MixageImg = ({ finalTag }) => {
         setImageUrl(urlData);
 
     };
-    console.log(userPrompt);
+    // console.log(userPrompt);
 
     return (
         <div className='mixageImg'>
@@ -40,10 +41,7 @@ const MixageImg = ({ finalTag }) => {
                     : <img src={logo} className="image" alt="logo" />
             }
 
-            <input
-                placeholder='A sunset on the Sydney Opera House'
-                onChange={(e) => setUserPrompt(e.target.value)}
-            />
+
             <button onClick={() => generateImage()}>Generate</button>
 
         </div>
