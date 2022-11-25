@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home';
-import TonTrip from './Pages/TonTrip';
 import Commande from './Pages/Commande';
 import Query from './components/Query';
 import Navbar from './components/navbar/Navbar';
@@ -15,9 +14,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tontrip" element={<TonTrip />} />
+        <Route path="/tontrip" element={<Query />} />
         <Route path="/commande" element={<Commande />} />
-        <Route path="/query" element={<Query />} />
       </Routes>
       <Footer />
     </div>
