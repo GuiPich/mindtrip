@@ -12,7 +12,7 @@ const sliderData = [
     {
         id: 2,
         picture: "/assets/portrait/portrait2.jpg",
-        quote: "To have been really intelligent for the first time in my life during this vacation was a transatizing experience.",
+        quote: "To have been really intelligent for the first time in my life during this vacation was a traumatic experience.",
         name: "Gérald D. :"
     },
     {

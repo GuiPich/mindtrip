@@ -6,9 +6,9 @@ import { Configuration, OpenAIApi } from "openai";
 
 const MixageImg = ({ finalTag }) => {
 
-
+    console.log(process.env.REACT_APP_OPENAI_API_KEY);
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: process.env.REACT_APP_OPENAI_API_KEY
     });
     const openai = new OpenAIApi(configuration);
 
@@ -34,7 +34,7 @@ const MixageImg = ({ finalTag }) => {
 
     return (
         <div className='mixageImg'>
-
+            <button onClick={() => generateImage()}>Un aperçu de vos futurs souvenirs ???</button>
             {
                 imageUrl
                     ? <img src={imageUrl} className="image" alt="ai thing" />
@@ -42,7 +42,7 @@ const MixageImg = ({ finalTag }) => {
             }
 
 
-            <button onClick={() => generateImage()}>Generate</button>
+
 
         </div>
     )
