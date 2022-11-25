@@ -81,6 +81,20 @@ const animal = [
         price: 2500,
         tag: " an angry t-rex"
 
+    },
+    {
+        id: 4,
+        name: "Unicorn",
+        price: 3000,
+        tag: " a white unicorn with rainbow hair"
+
+    },
+    {
+        id: 5,
+        name: "Panda",
+        price: 2000,
+        tag: " a panda bear with a chinese hat and a bamboo stick"
+
     }
 ]
 
@@ -136,7 +150,7 @@ const period = [
         id: 3,
         name: "futur",
         price: 1000,
-        tag: " in the future, with lots of colors and lights"
+        tag: " in the future, with lots of colors and lights, and futuristic buildings, in a realistic photography style"
 
 
     },
@@ -161,7 +175,7 @@ const place = [
         id: 1,
         name: "mars",
         price: 2000,
-        tag: "on the surface of planet mars"
+        tag: "on the surface of planet mars with red rocks"
 
     },
     {
@@ -191,6 +205,20 @@ const place = [
         name: "country side",
         price: 800,
         tag: "in a farm with farm animals, straw, green grass and a red barn"
+
+    },
+    {
+        id: 6,
+        name: "city",
+        price: 10000,
+        tag: "in a city by night with tall buildings"
+
+    },
+    {
+        id: 7,
+        name: "office",
+        price: 2000,
+        tag: "in a company office with desks and computers"
 
     }
 ]
@@ -255,7 +283,7 @@ function Option({ tarif }) {
     // console.log(selectPeriod)
     // console.log(selectPlace)
 
-    const finalTag = `picture of ${tag1} ${tag2} ${tag4} ${tag5}`;
+    const finalTag = `picture of ${tag1} and ${tag2}, ${tag4}, ${tag5}`;
 
     const tarifOption =
         tarif + parseInt(selectTime) + parseInt(selectPet) + parseInt(selectStar) + parseInt(selectPeriod) + parseInt(selectPlace);
