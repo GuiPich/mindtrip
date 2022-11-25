@@ -1,6 +1,6 @@
 import React from 'react'
 import Option from '../components/Option'
-import Navbar from '../components/navbar/Navbar';
+
 
 
 function Commande() {
