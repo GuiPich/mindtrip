@@ -11,7 +11,7 @@ function Commande() {
         <div>
 
             <div className='prixBrut'>
-                <p>Prix TTC en Zeni (hors options) <span> {tarif} Ƶ</span></p>
+                <p>Price VAT in Zeni (without options) <span> {tarif} Ƶ</span></p>
             </div>
             <Option tarif={tarif} />
 

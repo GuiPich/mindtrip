@@ -112,7 +112,7 @@ const Query = () => {
             {/* <button type='submit' onClick={handleDetails}>Details</button> */}
             {count == 1 &&
                 <div className='query_return'>
-                    <h1>Quel est votre destination?</h1>
+                    <h1>What is your destination?</h1>
                     <div className='query_return_proposition'>
                         {destination.map((image) => {
                             if (true) {
@@ -133,7 +133,7 @@ const Query = () => {
             }
             {count == 2 &&
                 <div className='query_return'>
-                    <h1>Quel moyen de transport?</h1>
+                    <h1>With what means of transportation?</h1>
                     <div className='query_return_proposition'>
                         {access.map(image => {
                             if (true) {
@@ -153,7 +153,7 @@ const Query = () => {
             }
             {count == 3 &&
                 <div className='query_return'>
-                    <h1>Avec qui?</h1>
+                    <h1>Who tou want to trip with?</h1>
                     <div className='query_return_proposition'>
                         {who.map(image => {
                             if (true) {
