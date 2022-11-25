@@ -3,21 +3,23 @@ import logo from '../assets/logo.png';
 import { Configuration, OpenAIApi } from "openai";
 
 
-const MixageImg = () => {
+const MixageImg = ({ finalTag }) => {
 
 
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: "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",
     });
     const openai = new OpenAIApi(configuration);
 
     const [userPrompt, setUserPrompt] = useState("");
     const [imageUrl, setImageUrl] = useState("");
 
+    console.log(finalTag);
+
     const generateImage = async () => {
 
         const response = await openai.createImage({
-            prompt: userPrompt,
+            prompt: finalTag,
             n: 1,
             size: "512x512",
         });

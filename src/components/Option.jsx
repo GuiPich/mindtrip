@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import MixageImg from './MixageImg'
 
 const star = [
     {
@@ -195,45 +196,70 @@ const place = [
 
 function Option({ tarif }) {
 
-    const [selectStar, setSelectStar] = useState(0)
-    const [selectPet, setSelectPet] = useState(0)
-    const [selectTime, setSelectTime] = useState(1500)
-    const [selectPeriod, setSelectPeriod] = useState(2000)
-    const [selectPlace, setSelectPlace] = useState(2000)
-    const [tag, setTag] = useState()
+    const [selectStar, setSelectStar] = useState(0);
+    const [selectPet, setSelectPet] = useState(0);
+    const [selectTime, setSelectTime] = useState(1500);
+    const [selectPeriod, setSelectPeriod] = useState(2000);
+    const [selectPlace, setSelectPlace] = useState(2000);
+    const [tag1, setTag1] = useState("non defini");
+    const [tag2, setTag2] = useState("non defini");
+    const [tag3, setTag3] = useState("non defini");
+    const [tag4, setTag4] = useState("non defini");
+    const [tag5, setTag5] = useState("non defini");
+    const [tag6, setTag6] = useState("non defini");
 
+
+    const tagChoice = (tableau, valeur) => {
+        let temp = "";
+        for (let i = 0; i < tableau.length; i++) {
+            if (valeur == tableau[i].price) {
+                temp = tableau[i].tag;
+            }
+        }
+        return temp;
+    }
 
 
     const handleChange1 = (event) => {
         setSelectStar(event.target.value);
-
+        setTag1(tagChoice(star, event.target.value));
     };
 
     const handleChange2 = (event) => {
         setSelectPet(event.target.value);
+        setTag2(tagChoice(animal, event.target.value));
+
     };
     const handleChange3 = (event) => {
         setSelectTime(event.target.value);
+        setTag3(tagChoice(time, event.target.value));
+
     };
 
     const handleChange4 = (event) => {
         setSelectPeriod(event.target.value);
+        setTag4(tagChoice(period, event.target.value));
+
     };
 
     const handleChange5 = (event) => {
         setSelectPlace(event.target.value);
+        setTag5(tagChoice(place, event.target.value));
+
     };
 
-    console.log(selectPet)
-    console.log(selectStar)
-    console.log(selectTime)
-    console.log(selectPeriod)
-    console.log(selectPlace)
+    // console.log(selectPet)
+    // console.log(selectStar)
+    // console.log(selectTime)
+    // console.log(selectPeriod)
+    // console.log(selectPlace)
+
+    const finalTag = `picture of ${tag1} ${tag2} ${tag3} ${tag4} ${tag5}`;
 
     const tarifOption =
         tarif + parseInt(selectTime) + parseInt(selectPet) + parseInt(selectStar) + parseInt(selectPeriod) + parseInt(selectPlace);
 
-    console.log(tarifOption)
+    // console.log(tarifOption)
 
     return (
         <div className='option'>
@@ -269,7 +295,7 @@ function Option({ tarif }) {
                     <label htmlFor='lengthList'>How long? ⏲️</label>
                     <select onChange={handleChange3} id="lengthList">
                         {time.map((time) => (
-                            <option key={time.id} value={time.price}>{time.name}</option>
+                            <option key={time.id} value={time.price} >{time.name}</option>
                         ))}
                     </select>
                 </div>
@@ -295,7 +321,7 @@ function Option({ tarif }) {
             </form>
 
             <p className='prixFinal'>Prix TTC options incluses en Zeni {tarifOption} Ƶ</p>
-
+            <MixageImg finalTag={finalTag} />
         </div>
     )
 }
