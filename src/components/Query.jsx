@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Picture from './Picture';
 import Pool from './Pool';
 import { Link } from 'react-router-dom';
+import Commande from '../Pages/Commande';
 
 const destination = [
     {
         id: 1,
         name: 'mars',
-        url: 'https://cdn.pixabay.com/photo/2012/11/28/09/08/mars-67522_1280.jpg',
+        url: 'https://cdn.pixabay.com/photo/2022/01/30/13/39/mars-6980902_1280.jpg',
         description: 'Sur Mars',
     },
     {
@@ -43,9 +44,9 @@ const access = [
     },
     {
         id: 7,
-        name: 'canon',
-        url: 'https://www.shutterstock.com/image-illustration/human-cannonball-on-white-background-260nw-133645379.jpg',
-        description: 'Façon homme canon',
+        name: 'char',
+        url: 'https://www.sainthilairenautisme.fr/wp-content/uploads/2021/03/char-a-voile-3.jpg',
+        description: 'En char à voile',
     },
     {
         id: 8,
@@ -56,7 +57,7 @@ const access = [
     {
         id: 9,
         name: 'delorean',
-        url: 'https://www.yvelines-infos.fr/content/uploads/2018/35792938-2098687413742839-5443431844324311040-o-e1535381102582.jpg',
+        url: 'https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2017/08/deloreanvolante-770__w770.jpg',
         description: 'En DeLorean volante',
     },
     {
@@ -69,14 +70,14 @@ const who = [
     {
         id: 11,
         name: 'kenny',
-        url: 'http://www.ulyces.co/wp-content/uploads/2017/09/south_park_action_poses___kenny_21_by_megasupermoon-d6b631i-400x508.jpg',
+        url: 'https://i.pinimg.com/originals/a3/bb/ea/a3bbea5f04100b7c640380a5812ec636.png',
         description: 'Kenny',
     },
     {
         id: 12,
-        name: 'Alban',
-        url: 'https://cinefeel.me/medias/people/a2923e7602451f0cebd0b9dd67a28f50.jpg',
-        description: 'Le père de Lucas',
+        name: 'Chuck Norris',
+        url: 'https://www.nanarland.com/uploads/content/acteurs/chucknorris/xchucknorris.jpg.pagespeed.ic.y1g-A3N3se.webp',
+        description: 'Chuck Norris',
     },
     {
         id: 13,
@@ -87,14 +88,14 @@ const who = [
     {
         id: 14,
         name: 'scrat',
-        url: 'https://vl-media.fr/wp-content/uploads/2022/02/Scrat.jpg',
+        url: 'https://img2.freepng.fr/20180325/hpe/kisspng-scrat-ice-age-village-manfred-sid-diego-ice-age-5ab75c4a8cb594.2613319415219661545764.jpg',
         description: 'Scrat',
     },
     {
         id: 15,
-        name: 'harleyquinn',
-        url: 'https://m.media-amazon.com/images/I/51IIevCpbgL._AC_.jpg',
-        description: 'La vraie Harley Quinn',
+        name: 'Wonderwoman',
+        url: 'https://fr.web.img2.acsta.net/c_310_420/pictures/19/02/01/20/49/5136728.jpg',
+        description: 'Wonderwoman',
     }];
 const Query = () => {
     const [query, setQuery] = useState('');
@@ -171,11 +172,8 @@ const Query = () => {
                 </div>
             }
             <Pool url1={question1} url2={question2} url3={question3} />
-            <div className='query_link'>
-                <Link to="/commande">
-                    <button type='submit' className='query_link_button'>Validation</button>
-                </Link>
-            </div>
+
+            <Commande />
         </div>
     );
 };
