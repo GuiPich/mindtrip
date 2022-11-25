@@ -12,7 +12,7 @@ const star = [
     }, {
         id: 1,
         name: "Nathalie Portman",
-        price: 5000,
+        price: 6000,
         tag: " a nice brunette",
 
     },
@@ -40,7 +40,7 @@ const star = [
     {
         id: 5,
         name: "Maggie Q",
-        price: 3500,
+        price: 3400,
         tag: "a nice asian woman with long hair"
 
     },
@@ -149,7 +149,7 @@ const period = [
     {
         id: 3,
         name: "futur",
-        price: 1000,
+        price: 900,
         tag: " in the future, with lots of colors and lights, and futuristic buildings, in a realistic photography style"
 
 
@@ -174,7 +174,7 @@ const place = [
     {
         id: 1,
         name: "mars",
-        price: 2000,
+        price: 2100,
         tag: "on the surface of planet mars with red rocks"
 
     },
@@ -217,7 +217,7 @@ const place = [
     {
         id: 7,
         name: "office",
-        price: 2000,
+        price: 1700,
         tag: "in a company office with desks and computers"
 
     }
