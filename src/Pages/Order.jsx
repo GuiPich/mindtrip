@@ -5,10 +5,8 @@ function Order() {
     const { id } = useParams();
     return (
         <div className='order'>
-            <h2>
-                Thanks for your choice !
-            </h2>
-            <h3> Your travel price is {id}  Ƶ</h3>
+            <h2 className='transform'> Thanks for your choice !  </h2> 
+            <h3 className='transform'> Your travel price is {id}  Ƶ</h3>
         </div>
     )
 }
