@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Picture from './Picture';
 import Pool from './Pool';
 import { Link } from 'react-router-dom';
+import Commande from '../Pages/Commande';
 
 const destination = [
     {
@@ -171,6 +172,8 @@ const Query = () => {
                 </div>
             }
             <Pool url1={question1} url2={question2} url3={question3} />
+
+            <Commande />
         </div>
     );
 };
