@@ -53,6 +53,7 @@
                 cursor: pointer;
                 transition: 0.3s ease-in-out;
                 border: hidden;
+                color: $font-color;
 
                 &:hover {
                     background-color: $secondary-color;

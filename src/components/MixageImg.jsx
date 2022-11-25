@@ -34,7 +34,9 @@ const MixageImg = ({ finalTag }) => {
 
     return (
         <div className='mixageImg'>
-            <button onClick={() => generateImage()}>Un aperçu de vos futurs souvenirs ???</button>
+
+            <button onClick={() => generateImage()}>A glimpse of your future memories ???</button>
+
             {
                 imageUrl
                     ? <img src={imageUrl} className="image" alt="ai thing" />
