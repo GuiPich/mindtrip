@@ -9,62 +9,62 @@ const destination = [
         id: 1,
         name: 'mars',
         url: 'https://cdn.pixabay.com/photo/2022/01/30/13/39/mars-6980902_1280.jpg',
-        description: 'Sur Mars',
+        description: 'On Mars',
     },
     {
         id: 2,
         name: 'plage',
         url: 'https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg',
-        description: 'A la plage',
+        description: 'At the beach',
     },
     {
         id: 3,
         name: 'centralperk',
         url: 'https://m.media-amazon.com/images/I/51rkb2jXLqL._AC_SX425_.jpg',
-        description: 'Au Central Perk',
+        description: 'At Central Perk',
     },
     {
         id: 4,
         name: 'southpark',
         url: 'https://thumbs.dreamstime.com/b/caract%C3%A8res-de-south-park-31908389.jpg',
-        description: 'A South Park',
+        description: 'At South Park',
     },
     {
         id: 5,
         name: 'Etoile de la mort',
         url: 'https://trustmyscience.com/wp-content/uploads/2016/12/star-wars-%C3%A9toile-noire.jpg',
-        description: 'Sur l\'étoile de la mort',
+        description: 'On the Death Star',
     }];
 const access = [
     {
         id: 6,
         name: 'trotinette',
         url: 'https://i.ebayimg.com/images/g/3s0AAOSwfYNgTiU0/s-l400.jpg',
-        description: 'En trotinette',
+        description: 'With scooter',
     },
     {
         id: 7,
         name: 'char',
         url: 'https://www.sainthilairenautisme.fr/wp-content/uploads/2021/03/char-a-voile-3.jpg',
-        description: 'En char à voile',
+        description: 'With yachting',
     },
     {
         id: 8,
         name: 'licorne',
         url: 'https://www.le-monde-du-stickers.fr/5444/sticker-chambre-licorne-coeur-arc-en-ciel.jpg',
-        description: 'En licorne',
+        description: 'On Unicorn',
     },
     {
         id: 9,
         name: 'delorean',
         url: 'https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2017/08/deloreanvolante-770__w770.jpg',
-        description: 'En DeLorean volante',
+        description: 'With The DeLorean',
     },
     {
         id: 10,
         name: 'flash',
         url: 'https://static.hitek.fr/img/actualite/w_flash-4.jpg',
-        description: 'En courant',
+        description: 'By Running',
     }];
 const who = [
     {
@@ -83,7 +83,7 @@ const who = [
         id: 13,
         name: 'fauxbatman',
         url: 'http://1.bp.blogspot.com/_MsAlYewfMUI/TQSZQUj5zvI/AAAAAAAAC6g/SIrzDiGO7OM/s1600/batman-cosplay.jpg',
-        description: 'Un faux Batman',
+        description: 'A fake Batman',
     },
     {
         id: 14,
