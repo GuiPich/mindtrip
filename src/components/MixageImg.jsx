@@ -3,15 +3,16 @@ import logo from '../assets/logo.png';
 import { Configuration, OpenAIApi } from "openai";
 
 
+
 const MixageImg = ({ finalTag }) => {
 
-
+    console.log(process.env.REACT_APP_OPENAI_API_KEY);
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: process.env.REACT_APP_OPENAI_API_KEY
     });
     const openai = new OpenAIApi(configuration);
 
-    const [userPrompt, setUserPrompt] = useState("");
+    // const [userPrompt, setUserPrompt] = useState("");
     const [imageUrl, setImageUrl] = useState("");
 
     console.log(finalTag);
@@ -29,22 +30,19 @@ const MixageImg = ({ finalTag }) => {
         setImageUrl(urlData);
 
     };
-    console.log(userPrompt);
+    // console.log(userPrompt);
 
     return (
         <div className='mixageImg'>
-
+            <button onClick={() => generateImage()}>Un aperçu de vos futurs souvenirs ???</button>
             {
                 imageUrl
                     ? <img src={imageUrl} className="image" alt="ai thing" />
                     : <img src={logo} className="image" alt="logo" />
             }
 
-            <input
-                placeholder='A sunset on the Sydney Opera House'
-                onChange={(e) => setUserPrompt(e.target.value)}
-            />
-            <button onClick={() => generateImage()}>Generate</button>
+
+
 
         </div>
     )

@@ -203,10 +203,10 @@ function Option({ tarif }) {
     const [selectPlace, setSelectPlace] = useState(2000);
     const [tag1, setTag1] = useState("non defini");
     const [tag2, setTag2] = useState("non defini");
-    const [tag3, setTag3] = useState("non defini");
+
     const [tag4, setTag4] = useState("non defini");
     const [tag5, setTag5] = useState("non defini");
-    const [tag6, setTag6] = useState("non defini");
+
 
 
     const tagChoice = (tableau, valeur) => {
@@ -232,7 +232,7 @@ function Option({ tarif }) {
     };
     const handleChange3 = (event) => {
         setSelectTime(event.target.value);
-        setTag3(tagChoice(time, event.target.value));
+
 
     };
 
@@ -254,7 +254,7 @@ function Option({ tarif }) {
     // console.log(selectPeriod)
     // console.log(selectPlace)
 
-    const finalTag = `picture of ${tag1} ${tag2} ${tag3} ${tag4} ${tag5}`;
+    const finalTag = `picture of ${tag1} ${tag2} ${tag4} ${tag5}`;
 
     const tarifOption =
         tarif + parseInt(selectTime) + parseInt(selectPet) + parseInt(selectStar) + parseInt(selectPeriod) + parseInt(selectPlace);
@@ -262,67 +262,77 @@ function Option({ tarif }) {
     // console.log(tarifOption)
 
     return (
-        <div className='option'>
-            <h1>Select your DreamTrip options</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quibusdam ipsa consequatur sint non quia odio, voluptas quis nam doloremque labore accusantium illo error modi voluptatibus dolorem debitis maiores laudantium?</p>
-            <form className='optionContainer'>
+        <>
+            <div className='option'>
+                <h1>Select your DreamTrip® options</h1>
+                <p>Please select all your desired options below to make
+                    your dream come true and enjoy your trip as you
+                    never could possibly imagine! Don't forget we offer a lifetime
+                    experience, so enjoy and remember... that it's all your head 😉!
 
-                <div className='optionCard'>
-                    <h2>Travel with star ✨</h2>
+                </p>
+                <form className='optionContainer'>
 
-                    <label htmlFor='starsList'>Yes! But who?</label>
-                    <select onChange={handleChange1} id="starsList">
-                        {star.map((star) => (
-                            <option key={star.id} value={star.price}>{star.name}</option>
-                        ))}
-                    </select>
-                </div>
+                    <div className='optionCard'>
+                        <h2>Travel with star ✨</h2>
 
-
-                <div className='optionCard'>
-                    <h2>Travel with a pet 🐺</h2>
-                    <label htmlFor='animalList'>Yes! but which one?</label>
-                    <select onChange={handleChange2} id="animalList">
-                        {animal.map((pet) => (
-                            <option key={pet.id} value={pet.price}>{pet.name}</option>
-                        ))}
-                    </select>
-                </div>
+                        <label htmlFor='starsList'>Yes! But who?</label>
+                        <select onChange={handleChange1} id="starsList">
+                            {star.map((star) => (
+                                <option key={star.id} value={star.price}>{star.name}</option>
+                            ))}
+                        </select>
+                    </div>
 
 
-                <div className='optionCard'>
-                    <h2>Dream length</h2>
-                    <label htmlFor='lengthList'>How long? ⏲️</label>
-                    <select onChange={handleChange3} id="lengthList">
-                        {time.map((time) => (
-                            <option key={time.id} value={time.price} >{time.name}</option>
-                        ))}
-                    </select>
-                </div>
+                    <div className='optionCard'>
+                        <h2>Travel with a pet 🐺</h2>
+                        <label htmlFor='animalList'>Yes! but which one?</label>
+                        <select onChange={handleChange2} id="animalList">
+                            {animal.map((pet) => (
+                                <option key={pet.id} value={pet.price}>{pet.name}</option>
+                            ))}
+                        </select>
+                    </div>
 
-                <div className='optionCard'>
-                    <h2>Period</h2>
-                    <label htmlFor='lengthList'>In which period ⏲️</label>
-                    <select onChange={handleChange4} id="lengthList">
-                        {period.map((era) => (
-                            <option key={era.id} value={era.price}>{era.name}</option>
-                        ))}
-                    </select>
-                </div>
-                <div className='optionCard'>
-                    <h2>Place of  DreamTrip</h2>
-                    <label htmlFor='lengthList'>Where? ⏲️</label>
-                    <select onChange={handleChange5} id="lengthList">
-                        {place.map((place) => (
-                            <option key={place.id} value={place.price}>{place.name}</option>
-                        ))}
-                    </select>
-                </div>
-            </form>
 
-            <p className='prixFinal'>Prix TTC options incluses en Zeni {tarifOption} Ƶ</p>
+                    <div className='optionCard'>
+                        <h2>Dream length</h2>
+                        <label htmlFor='lengthList'>How long? ⏲️</label>
+                        <select onChange={handleChange3} id="lengthList">
+                            {time.map((time) => (
+                                <option key={time.id} value={time.price} >{time.name}</option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div className='optionCard'>
+                        <h2>Period ⚔️</h2>
+                        <label htmlFor='lengthList'>In which period </label>
+                        <select onChange={handleChange4} id="lengthList">
+                            {period.map((era) => (
+                                <option key={era.id} value={era.price}>{era.name}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className='optionCard'>
+                        <h2>Place of  DreamTrip 🏝️</h2>
+                        <label htmlFor='lengthList'>Where? </label>
+                        <select onChange={handleChange5} id="lengthList">
+                            {place.map((place) => (
+                                <option key={place.id} value={place.price}>{place.name}</option>
+                            ))}
+                        </select>
+                    </div>
+                </form>
+
             <MixageImg finalTag={finalTag} />
-        </div>
+                <div className='contPrixFinal'>
+                    <p className='prixFinal'>Total price options included VAT in Zeni <span>{tarifOption} Ƶ</span></p>
+                    <button className='btn'>Order and Pay</button>
+                </div>
+            </div>
+        </>
     )
 }
 
