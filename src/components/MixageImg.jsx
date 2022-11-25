@@ -40,10 +40,6 @@ const MixageImg = ({ finalTag }) => {
                     ? <img src={imageUrl} className="image" alt="ai thing" />
                     : <img src={logo} className="image" alt="logo" />
             }
-
-
-
-
         </div>
     )
 }
