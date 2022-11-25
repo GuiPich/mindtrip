@@ -325,13 +325,13 @@ function Option({ tarif }) {
                         </select>
                     </div>
                 </form>
+                <MixageImg finalTag={finalTag} />
 
                 <div className='contPrixFinal'>
                     <p className='prixFinal'>Total price options included VAT in Zeni <span>{tarifOption} Ƶ</span></p>
                     <button className='btn'>Order and Pay</button>
                 </div>
             </div>
-            <MixageImg finalTag={finaltag} />
         </>
     )
 }

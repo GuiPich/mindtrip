@@ -10,9 +10,9 @@ function Commande() {
     return (
         <div>
 
-
-            <p>Prix TTC en Zeni (hors options) {tarif} Ƶ</p>
-
+            <div className='prixBrut'>
+                <p>Prix TTC en Zeni (hors options) <span> {tarif} Ƶ</span></p>
+            </div>
             <Option tarif={tarif} />
 
 
