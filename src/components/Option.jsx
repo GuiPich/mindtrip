@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import MixageImg from './MixageImg'
 
 const star = [
@@ -329,7 +330,7 @@ function Option({ tarif }) {
 
                 <div className='contPrixFinal'>
                     <p className='prixFinal'>Total price options included VAT in Zeni <span>{tarifOption} Ƶ</span></p>
-                    <button className='btn'>Order and Pay</button>
+                    <NavLink to={`/order/${tarifOption}`}> <button className='btn'>Order and Pay</button></NavLink>
                 </div>
             </div>
         </>
