@@ -167,4 +167,5 @@ const Query = () => {
         </div>
     );
 };
+
 export default Query;
