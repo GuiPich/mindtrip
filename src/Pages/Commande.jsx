@@ -10,7 +10,7 @@ function Commande() {
     return (
         <div>
 
-            <div>Commande</div>
+
             <p>Prix TTC en Zeni (hors options) {tarif} Ƶ</p>
 
             <Option tarif={tarif} />
